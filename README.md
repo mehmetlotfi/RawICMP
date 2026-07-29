@@ -18,7 +18,7 @@ This project is distributed under the **GNU General Public License v3.0 (GPLv3)*
 Before compiling the project, run the `configure` script to verify that all required dependencies are installed.
 
 ```bash
-chmod +x ./configur
+chmod +x ./configure
 ./configure
 ```
 
