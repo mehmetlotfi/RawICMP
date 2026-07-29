@@ -1,0 +1,65 @@
+#!/bin/sh
+
+FAILED=0
+
+printf "Checking for GCC... "
+
+if command -v gcc >/dev/null 2>&1; then
+    echo " [OK] "
+else
+    echo " [Not Found] "
+    FAILED=1
+fi
+
+printf "Checking for pthread library... "
+
+cat > .pthread_test.c << EOF
+#include "pthread.h"
+
+int main (void)
+{
+    pthread_t t;
+    (void) t;
+    return 0;
+}
+EOF
+
+if gcc .pthread_test.c -o .pthread_test -lpthread >/dev/null 2>&1; then
+    echo " [OK] "
+else
+    echo " [Not Found] "
+    FAILED=1
+fi
+
+rm -f .pthread_test.c .pthread_test
+
+if [ "$FAILED" -eq 0 ]; then
+    echo
+    echo "[+] All required dependencies are installed."
+    exit 0
+fi
+
+
+if [ -f /etc/debian_version ]; then
+    echo "Debian / Ubuntu:"
+    echo "    sudo apt install build-essential"
+elif [ -f /etc/arch-release ]; then
+    echo "Arch Linux / Manjaro:"
+    echo "    sudo pacman -S base-devel"
+elif [ -f /etc/fedora-release ]; then
+    echo "Fedora:"
+    echo "    sudo dnf install gcc glibc-devel"
+elif [ -f /etc/redhat-release ]; then
+    echo "RHEL / CentOS:"
+    echo "    sudo dnf install gcc glibc-devel"
+elif [ -f /etc/alpine-release ]; then
+    echo "Alpine Linux:"
+    echo "    sudo apk add build-base"
+elif [ -f /etc/SuSE-release ] || [ -f /etc/os-release ] && grep -qi suse /etc/os-release; then
+    echo "openSUSE:"
+    echo "    sudo zypper install gcc make glibc-devel"
+else
+    echo "Install a C compiler (gcc) and POSIX threads development package."
+fi
+
+exit 1
