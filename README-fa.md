@@ -17,7 +17,7 @@
 دستور زیر را برای کلون از پروژه روی کامپیتور خود اجرا کنید:
 
 ```bash
-git clone https://github.com/mehmetlotfi/dos/
+git clone https://github.com/mehmetlotfi/Dos.git
 ```
 
 ## راهنماهای نصب و استفاده

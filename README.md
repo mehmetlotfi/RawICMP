@@ -14,17 +14,17 @@ This project is released under the **GNU General Public License v3.0 (GPLv3)** l
 Run the following command to clone the project on your computer:
 
 ```bash
-git clone https://github.com/mehmetlotfi/dos/
+git clone https://github.com/mehmetlotfi/Dos.git
 ```
 
 ## Installation and Usage Guides
 
-**[Farsi Guide for the ICMP Program](icmp/README-fa.md)**
+**[راهنمای فارسی برنامه ICMP](icmp/README-fa.md)**
 
 **[English Guide for the ICMP Program](icmp/README.md)**
 
-**[Farsi Guide for the HTTP Program](http/README-fa.md)**
+**[راهنمای فارسی برنامه HTTP](http/README-fa.md)**
 
-**[English Guide for the HTTP Program](http/README-fa.md)**
+**[English Guide for the HTTP Program](http/README.md)**
 
 # Mehmet Lotfi
