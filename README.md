@@ -1,71 +1,30 @@
-# icmp dos
+# dos project 
 
-ICMP-based DDoS attack simulator
+Dos attack simulator with different protocols
 
 **[برای مشاهده توضیحات فارسی اینجا را کلیک کنید](README-fa.md)**
 
-
-The person executing the code bears responsibility for any misuse; this code is written and released solely for educational purposes regarding ICMP socket programming and concurrent programming.
+The responsibility for improper use of the code lies with the person executing the code, this code is written and distributed solely for learning how to write sockets and concurrent programming
 
 ## License
 
-This project is distributed under the **GNU General Public License v3.0 (GPLv3)**.
+This project is released under the **GNU General Public License v3.0 (GPLv3)** license.
 
-## Building and Installation
-
-### 1. Check Dependencies
-
-Before compiling the project, run the `configure` script to verify that all required dependencies are installed.
+## Download the project
+Run the following command to clone the project on your computer:
 
 ```bash
-chmod +x ./configure
-./configure
+git clone https://github.com/mehmetlotfi/Dos.git
 ```
 
-If the script reports `OK`, you can continue to the next step.
+## Installation and Usage Guides
 
-Otherwise, one or more required components (such as the **GCC compiler** or **POSIX Threads (pthread)** support) are missing or not correctly installed on your system. Resolve the reported issue and run the script again.
+**[راهنمای فارسی برنامه ICMP](icmp/README-fa.md)**
 
-### 2. Build
+**[English Guide for the ICMP Program](icmp/README.md)**
 
-Compile the project by running:
+**[راهنمای فارسی برنامه HTTP](http/README-fa.md)**
 
-```bash
-make
-```
-
-### 3. Install
-
-To install the compiled binary into your system's executable path, run:
-
-```bash
-sudo make install
-```
-
-After installation, the program can be executed from any directory.
-
-
-## Usage
-
-To use the program, provide the following parameters:
-
-### target_ip
-
-
-Destination IP address (target)
-
-
-### duration_in_minutes
-
-
-Time of the attack
-
-
-### thread_count
-
-
-Number of threads involved
-(In this program, each thread individually starts sending ICMP packets to the destination IP.)
-
+**[English Guide for the HTTP Program](http/README.md)**
 
 # Mehmet Lotfi
